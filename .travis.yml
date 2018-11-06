@@ -1,8 +1,12 @@
 language: node_js
-node_js:
-  - '6'
-  - '8'
-  - '10'
+jobs:
+  include:
+    - env: TARGET_X=aarch64-unknown-linux-gnu 
+      node_js: "6"
+    - env: TARGET_X=aarch64-unknown-linux-gnu 
+      node_js: "8"
+    - env: TARGET_X=aarch64-unknown-linux-gnu 
+      node_js: "10"     
 cache:
   directories:
     - node_modules
